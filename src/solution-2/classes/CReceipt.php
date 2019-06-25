@@ -16,26 +16,28 @@
  *  limitations under the License.
  */
 
+/**
+ * @author Rafael Gutiérrez Martínez
+ * @since 1.0
+ * @version 1.0
+ * @package solution-2
+ */
+
 namespace lmcom\solution2\entities;
 
 use Iterator;
+use Countable;
 
 /**
  * Main class to represent a Receipt instance.
  * This class implements the interace Iterator to have the capability to be iterated over each line in the receipt.
- * @
  */
-class CReceipt extends CAbstractReceiptObject implements Iterator
+class CReceipt extends CAbstractReceiptObject implements Iterator, Countable
 {
     /** @var array $lines Array of lines, each one of type @see { lmcom\solution2\entities\CReceiptLine }. */
     private $lines = array();
     /** @var int $position When iterates the Receipt, this is the current position in $lines array. */
     private $position = 0;
-
-    public function __construct()
-    {
-
-    }
 
     /**
      * Iterator interface method that retry current line when iterates the receipt.
@@ -81,6 +83,15 @@ class CReceipt extends CAbstractReceiptObject implements Iterator
     public function rewind()
     {
         $this->position = 0;
+    }
+
+    /**
+     * Countable interface method get number of elements stored (lines in the Receipt).
+     * @return int Returns the number of lines stored.
+     */
+    public function count(): int
+    {
+        return count($this->lines);
     }
 
     /**

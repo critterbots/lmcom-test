@@ -16,10 +16,18 @@
  *  limitations under the License.
  */
 
+ /**
+  * @author Rafael Gutiérrez Martínez
+  * @since 1.0
+  * @version 1.0
+  * @package solution-2
+  */
+
 namespace lmcom\solution2\entities;
 
 /**
- * Abstract base class for Receipts.
+ * Abstract base class for Receipt object. This class covers minimal requirements to have a gross and taxes properties,
+ * and a method to get the total amount (gross + taxes).
  */
 class CAbstractReceiptObject
 {

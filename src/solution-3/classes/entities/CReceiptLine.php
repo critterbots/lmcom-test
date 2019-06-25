@@ -16,8 +16,22 @@
  *  limitations under the License.
  */
 
-namespace lmcom\solution2\entities;
+/**
+ * @author Rafael Gutiérrez Martínez
+ * @since 1.0
+ * @version 1.0
+ * @package solution-3
+ */
 
+namespace lmcom\solution3\entities;
+
+use lmcom\solution3\domains\CTaxCase;
+
+/**
+ * Detail class to represent a line in a Receipt.
+ * Some getters are not implemented due to in this requirement are not needed. In furure iterations over the problem,
+ * we could to add those getters to access to stored additional attributes.
+ */
 class CReceiptLine extends CAbstractReceiptObject
 {
     /** @var float $quantity Quantity of items. */
@@ -36,8 +50,8 @@ class CReceiptLine extends CAbstractReceiptObject
      * @param float $quantity Quantity of items in the line.
      * @param string $description Description of the line.
      * @param float $unit_price Price for each item in the line.
-     * @param float $sales_tax $sales tax in range [0, 1].
-     * @param float $duty_tax $duty_tax in range [0, 1].
+     * @param float $sales_tax Sales tax in range [0, 1].
+     * @param float $duty_tax Duty_tax in range [0, 1].
      */
     public function __construct(float $quantity, string $description, float $unit_price, float $sales_tax, float $duty_tax)
     {
@@ -51,7 +65,7 @@ class CReceiptLine extends CAbstractReceiptObject
         $gross = $quantity * $unit_price;
         $this->addGross($gross);
         /* Compute line taxes. */
-        $this->addTaxes(ceil(($gross * ($sales_tax + $duty_tax)) / 0.05) * 0.05);
+        $this->addTaxes(CTaxCase::computeTaxes($gross, $sales_tax, $duty_tax));
     }
 
     /**

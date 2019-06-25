@@ -1,0 +1,36 @@
+{
+    "type": "project",
+    "description": "lastminute.com Problem",
+    "version": "1.0.0",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Rafael Gutierrez Martinez",
+            "email": "ragutimar@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/critterbots/lmcom-test/issues",
+        "email": "ragutimar@gmail.com",
+        "source": "https://github.com/critterbots/lmcom-test"
+    },
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    },
+    "autoload": {
+        "classmap": [
+            "src/solution-2",
+            "src/solution-3"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/solution-2",
+            "tests/solution-3"
+        ]
+    }
+}

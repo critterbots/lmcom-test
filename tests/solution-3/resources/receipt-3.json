@@ -1,0 +1,30 @@
+[
+    {
+        "quantity": 1,
+        "description": "imported bottle of perfume",
+        "price": 27.99,
+        "sales_tax": 0.1,
+        "duty_tax": 0.05
+    },
+    {
+        "quantity": 1,
+        "description": "bottle of perfume",
+        "price": 18.99,
+        "sales_tax": 0.1,
+        "duty_tax": 0
+    },
+    {
+        "quantity": 1,
+        "description": "packet of headache pills",
+        "price": 9.75,
+        "sales_tax": 0,
+        "duty_tax": 0
+    },
+    {
+        "quantity": 1,
+        "description": "box of imported chocolates",
+        "price": 11.25,
+        "sales_tax": 0,
+        "duty_tax": 0.05
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "quantity": 1,
+        "description": "imported box of chocolates",
+        "price": 10.00,
+        "sales_tax": 0,
+        "duty_tax": 0.05
+    },
+    {
+        "quantity": 1,
+        "description": "imported bottle of perfume",
+        "price": 47.50,
+        "sales_tax": 0.1,
+        "duty_tax": 0.05
+    }
+]

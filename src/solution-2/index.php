@@ -23,9 +23,9 @@
  * @package solution-2
  */
 
-require_once 'src/CAbstractReceiptObject.php';
-require_once 'src/CReceipt.php';
-require_once 'src/CReceiptLine.php';
+require_once 'classes/CAbstractReceiptObject.php';
+require_once 'classes/CReceipt.php';
+require_once 'classes/CReceiptLine.php';
 
 use lmcom\solution2\entities\CReceipt;
 

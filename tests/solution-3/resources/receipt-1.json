@@ -1,0 +1,23 @@
+[
+    {
+        "quantity": 1,
+        "description": "book",
+        "price": 12.49,
+        "sales_tax": 0,
+        "duty_tax": 0
+    },
+    {
+        "quantity": 1,
+        "description": "music CD",
+        "price": 14.99,
+        "sales_tax": 0.1,
+        "duty_tax": 0
+    },
+    {
+        "quantity": 1,
+        "description": "chocolate bar",
+        "price": 0.85,
+        "sales_tax": 0,
+        "duty_tax": 0
+    }
+]
