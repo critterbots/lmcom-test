@@ -37,8 +37,13 @@
     </logging>
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
-            <!-- <directory>./src/solution-2/</directory> -->
+            <directory>./src/solution-2/</directory>
             <directory>./src/solution-3/</directory>
+            <exclude>
+                <file>./src/solution-1/index.php</file>
+                <file>./src/solution-2/index.php</file>
+                <file>./src/solution-3/index.php</file>
+            </exclude>
         </whitelist>
     </filter>
     <php>
